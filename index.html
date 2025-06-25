@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofoliu Iacoveț Artemie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bun venit!</h1>
+    <nav>
+      <a href="#about">Cine sunt eu</a>
+      <a href="#projects">Lucrările mele</a>
+      <a href="#contact">Contactează-mă</a>
+    </nav>
+  </header>
+<img src="poza-profil.jpg" alt="Iacoveț Artemie" class="profil-img">
+<section id="about">
+  <img src="poza-profil.jpg" alt="Iacoveț Artemie" class="profil-img">
+  <h2>Despre mine</h2>
+  <p>Mă numesc <strong>Iacoveț Artemie</strong>, am 18 ani și sunt elev la <strong>IPLTPA „Nicolae Sulac”</strong> din Chișinău. Sunt ambițios, pasionat de tehnologie și îmi place să învăț lucruri noi. Creez aplicații web moderne și îmi dezvolt constant cunoștințele în domeniul programării.</p>
+  <p>📍 <strong>Locație:</strong> Chișinău</p>
+  <p>🗣️ <strong>Limbi vorbite:</strong> română, engleză, rusă</p>
+  <p>💻 <strong>Domeniu:</strong> Web Developer (dezvoltare site-uri, aplicații web simple)</p>
+  <a href="cv-iacovet-artemie.pdf" download class="btn-cv">Descarcă CV-ul meu</a>
+</section>
+
+  <section id="about">
+    <h2>Despre mine</h2>
+    <p>Mă numesc <strong>Iacoveț Artemie</strong>, sunt elev la liceu și creez aplicații web moderne. Am 18 ani, sunt ambițios și doresc să îmi îndeplinesc scopurile.</p>
+    <p>Îmi place să învăț lucruri noi legate de tehnologie, să dezvolt site-uri care arată bine și funcționează eficient. Lucrez constant la îmbunătățirea abilităților mele în HTML, CSS și JavaScript.</p>
+    <p>Sunt pasionat de dezvoltare web, design minimalist și doresc să colaborez în proiecte care aduc valoare reală. Îmi plac provocările și cred în progresul prin muncă și perseverență.</p>
+  </section>
+<a href="cv-iacovet-artemie.pdf" download class="btn-cv">Descarcă CV-ul meu</a>
+
+  <section id="projects">
+    <h2>Lucrările mele</h2>
+    <ul>
+      <li>Aplicație de notițe – realizată cu React și Firebase</li>
+      <li>Portofoliu personal – site care îmi prezintă abilitățile și proiectele</li>
+      <li>Landing page pentru un salon de coafură – HTML & CSS responsive</li>
+      <li>Pagi* Reni simple de prezentare – realizate pentru colegi sau proiecte școlare</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contactează-mă</h2>
+    <p>📞 Telefon: 060156785</p>
+    <p>📧 Email: iacovetartemie@gmail.com</p>
+    <p>📸 Instagram: <a href="https://instagram.com/iacovetartemie" target="_blank">@iacovetartemie</a></p>
+    <p>🔗 LinkedIn: <a href="https://linkedin.com/in/iacovetartemie" target="_blank">linkedin.com/in/iacovetartemie</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Iacoveț Artemie. Toate drepturile rezervate.</p>
+  </footer>
+  <script>
+  const sections = document.querySelectorAll('section');
+  const options = {
+    threshold: 0.2
+  };
+
+  const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
